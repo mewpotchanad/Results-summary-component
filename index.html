@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+
+    <title>Frontend Mentor | Results summary component</title>
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Hanken+Grotesk" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      body {
+        font-family: "Hanken Grotesk", sans-serif;
+        box-sizing: border-box;
+        padding: 0;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        right: 45%;
+        padding: 10px;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .left-box p {
+        font-size: 18px;
+        margin: 10px;
+      }
+      .container {
+        background-color: hsl(0, 0%, 100%);
+        box-shadow: 10px 10px 30px #aaaaaa;
+        border-radius: 20px;
+        width: 1440px;
+        margin: auto;
+        display: flex;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .left-box {
+        background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+        border-radius: 20px;
+        padding: 70px;
+        width: 50%;
+        text-align: center;
+        color: hsl(0, 0%, 100%);
+        display: flex;
+        flex-direction: column;
+      }
+      .right-box {
+        padding: 50px;
+        margin: auto;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+      }
+      .right-box div {
+        padding: 5px;
+      }
+      button {
+        background-color: hsl(224, 30%, 27%);
+        padding: 10px;
+        border-radius: 50px;
+        color: hsl(0, 0%, 100%);
+        width: 100%;
+        height: 5vh;
+        font-size: 18px;
+      }
+      .orangey {
+        background-color: hsl(0, 100%, 67%, 0.1);
+        border-radius: 10px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 5vh;
+        font-size: 18px;
+      }
+      .yellow {
+        background-color: hsl(39, 100%, 56%, 0.1);
+        border-radius: 10px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 5vh;
+        font-size: 18px;
+      }
+      .green {
+        background-color: hsl(166, 100%, 37%, 0.1);
+        border-radius: 10px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 5vh;
+        font-size: 18px;
+      }
+      .blue {
+        background-color: hsl(234, 85%, 45%, 0.1);
+        border-radius: 10px;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 5vh;
+        font-size: 18px;
+      }
+      .circle {
+        background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        margin: auto;
+        padding: 80px;
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      .number {
+        font-size: 150px;
+      }
+      span {
+        font-weight: bold;
+      }
+      svg {
+        padding-right: 5px;
+      }
+      #visual {
+        color: hsl(0, 100%, 67%);
+      }
+      #reaction {
+        color: hsl(39, 100%, 56%);
+      }
+      #memory {
+        color: hsl(166, 100%, 37%);
+      }
+      #verbal {
+        color: hsl(234, 85%, 45%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left-box">
+        <h2>Your Result</h2>
+        <div class="circle">
+          <div class="number">76</div>
+          <div style="opacity: 0.8">of 100</div>
+        </div>
+        <h1 style="font-weight: 800">Great</h1>
+        <p>
+          You scored higher than 65% of<br />
+          the people who have taken<br />
+          these tests.
+        </p>
+      </div>
+      <div class="right-box">
+        <h1>Summary</h1>
+        <div class="orangey" style="padding: 20px">
+          <div class="reaction">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="none"
+              viewBox="0 0 20 20"
+              id="reaction"
+            >
+              <path
+                stroke="#F55"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.25"
+                d="M10.833 8.333V2.5l-6.666 9.167h5V17.5l6.666-9.167h-5Z"
+              />
+            </svg>
+            <span style="color: hsl(0, 100%, 67%)">Reaction</span>
+          </div>
+          <div><span>80</span> / 100</div>
+        </div>
+        <div class="yellow" style="padding: 20px">
+          <div class="memory">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="none"
+              viewBox="0 0 20 20"
+              id="memory"
+            >
+              <path
+                stroke="#FFB21E"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.25"
+                d="M5.833 11.667a2.5 2.5 0 1 0 .834 4.858"
+              />
+              <path
+                stroke="#FFB21E"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.25"
+                d="M3.553 13.004a3.333 3.333 0 0 1-.728-5.53m.025-.067a2.083 2.083 0 0 1 2.983-2.824m.199.054A2.083 2.083 0 1 1 10 3.75v12.917a1.667 1.667 0 0 1-3.333 0M10 5.833a2.5 2.5 0 0 0 2.5 2.5m1.667 3.334a2.5 2.5 0 1 1-.834 4.858"
+              />
+              <path
+                stroke="#FFB21E"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.25"
+                d="M16.447 13.004a3.334 3.334 0 0 0 .728-5.53m-.025-.067a2.083 2.083 0 0 0-2.983-2.824M10 3.75a2.085 2.085 0 0 1 2.538-2.033 2.084 2.084 0 0 1 1.43 2.92m-.635 12.03a1.667 1.667 0 0 1-3.333 0"
+              />
+            </svg>
+            <span style="color: hsl(39, 100%, 56%)">Memory</span>
+          </div>
+          <div><span>92 </span>/ 100</div>
+        </div>
+        <div class="green" style="padding: 20px">
+          <div class="verbal">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="none"
+              viewBox="0 0 20 20"
+              id="verbal"
+            >
+              <path
+                stroke="#00BB8F"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.25"
+                d="M7.5 10h5M10 18.333A8.333 8.333 0 1 0 1.667 10c0 1.518.406 2.942 1.115 4.167l-.699 3.75 3.75-.699A8.295 8.295 0 0 0 10 18.333Z"
+              />
+            </svg>
+            <span style="color: hsl(166, 100%, 37%)">Verbal</span>
+          </div>
+          <div><span>61</span> / 100</div>
+        </div>
+        <div class="blue" style="padding: 20px">
+          <div class="visual">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="none"
+              viewBox="0 0 20 20"
+              id="visual"
+            >
+              <path
+                stroke="#1125D6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.25"
+                d="M10 11.667a1.667 1.667 0 1 0 0-3.334 1.667 1.667 0 0 0 0 3.334Z"
+              />
+              <path
+                stroke="#1125D6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.25"
+                d="M17.5 10c-1.574 2.492-4.402 5-7.5 5s-5.926-2.508-7.5-5C4.416 7.632 6.66 5 10 5s5.584 2.632 7.5 5Z"
+              />
+            </svg>
+            <span style="color: hsl(234, 85%, 45%)">Visual</span>
+          </div>
+          <div><span>72</span> / 100</div>
+        </div>
+        <button>Continue</button>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/mewpotchanad">Nattha Potchanad</a>.
+    </div>
+  </body>
+</html>
